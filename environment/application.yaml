@@ -5,8 +5,6 @@ kind: Application
 metadata:
   name: my-app
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io # Finalizer to ensure that the application is deleted properly
 spec:
   project: default # The project name in ArgoCD 
   source:
@@ -17,7 +15,6 @@ spec:
       recurse: false      # Explicitly stating it's false (optional)
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd # The namespace where the application will be deployed
   # Sync policy for the application
   # This section is optional, but it's good to have it for better control
   # over how the application is synced

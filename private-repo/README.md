@@ -2,3 +2,18 @@
 
 - Create a private docker image
 - Create a private repository
+
+## USE SSH to Authenticate with Argocd
+- Create SSH ed25519
+
+ssh-keygen -t ed25519 -f ~/.ssh/argocd
+
+- Uplaod the public SSH key to Github with only read access 
+on the github repo, click settings
+Deploy keys
+Add deploy key
+Title ""
+Paste the public key
+
+- Create a kubernetes secret and mount the private key as the secret
+```
