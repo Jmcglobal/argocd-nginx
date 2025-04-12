@@ -10,13 +10,12 @@ spec:
   source:
     repoURL: https://github.com/Jmcglobal/argocd-nginx.git
     targetRevision: master # Branch to deploy from
-    path: environment/app-1 # Path to the directory containing the Kubernetes manifests
+    path: environment # Path to the directory containing the Kubernetes manifests
     # namespace: dev # The namespace where the application will be deployed
     directory:            # Optional block, not needed here unless you want extra settings
-      recurse: false      # Explicitly stating it's false (optional)
+      recurse: true      # Explicitly stating it's false (optional)
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev # The namespace where the application will be deployed
   # Sync policy for the application
   # This section is optional, but it's good to have it for better control
   # over how the application is synced
