@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app
+  name: my-app-2
   namespace: argocd
   finalizers:
    - resources-finalizer.argocd.argoproj.io # Finalizer to ensure that the application is deleted properly
