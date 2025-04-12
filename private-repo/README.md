@@ -17,3 +17,11 @@ Paste the public key
 
 - Create a kubernetes secret and mount the private key as the secret
 ```
+```
+
+## Create a Secret for Private Image using a private token or password
+kubectl create secret docker-registry dockerconfig -n foo \
+--docker-server="https://index.docker.io/v1/" \
+--docker-username=<username> \
+--docker-password=<password or token> \
+--docker-email=jmc@yahoo.mail 
