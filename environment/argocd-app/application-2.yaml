@@ -13,6 +13,7 @@ spec:
     repoURL: https://github.com/Jmcglobal/argocd-nginx.git
     targetRevision: master # Branch to deploy from
     path: environment/app-2 # Path to the directory containing the Kubernetes manifests 
+    namespace: foo # The namespace where the application will be deployed
     directory:            # Optional block, not needed here unless you want extra settings
       recurse: false      # Explicitly stating it's false (optional)
   destination:
