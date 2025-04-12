@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: jmcglobal/nginx:v0.1.1
+          image: jmcglobal/nginx:v0.2.2
           ports:
             - containerPort: 80
